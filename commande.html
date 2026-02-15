@@ -2,206 +2,21 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Commande par WhatsApp - Pâtisserie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commande - Douceurs & Gourmandises</title>
-    
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    
     <style>
-        nav, footer {
-            background-color: rgb(240, 151, 151);
-        } 
-
-        .navbar-brand {
-            text-decoration: none;
-            font-weight: 300;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white !important;
-        }
-
-        .navbar-brand:hover {
-            color: rgba(255, 255, 255, 0.8) !important;
-        }
-
-        p {
-            text-align: center;
-            font-weight: 100;
-            font-size: medium;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        .order-form {
-            background-color: white;
-            border: 2px solid rgb(240, 151, 151);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-        }
-        
-        .form-title {
-            color: rgb(200, 100, 100);
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .form-section {
-            background-color: rgb(250, 240, 240);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-        
-        .form-section h4 {
-            color: rgb(240, 151, 151);
-            margin-bottom: 20px;
-            border-bottom: 2px solid rgb(240, 151, 151);
-            padding-bottom: 10px;
-        }
-        
-        .btn-submit {
-            background-color: rgb(240, 151, 151);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-        
-        .btn-submit:hover {
-            background-color: rgb(220, 131, 131);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-add-cake {
-            background-color: white;
-            color: rgb(240, 151, 151);
-            border: 2px solid rgb(240, 151, 151);
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-        
-        .btn-add-cake:hover {
-            background-color: rgb(240, 151, 151);
-            color: white;
-        }
-        
-        .btn-remove {
-            color: rgb(220, 53, 69);
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-        
-        .btn-remove:hover {
-            color: rgb(200, 35, 51);
-        }
-        
-        .price-display {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: rgb(240, 151, 151);
-        }
-        
-        .total-price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: rgb(200, 100, 100);
-            text-align: right;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 3px dashed rgb(240, 151, 151);
-        }
-        
-        .confirmation-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            border: 3px solid rgb(240, 151, 151);
-        }
-        
-        .modal-content i {
-            font-size: 4rem;
-            color: rgb(240, 151, 151);
-            margin-bottom: 20px;
-        }
-        
-        .error-message {
-            color: #dc3545;
-            font-size: 0.9rem;
-            margin-top: 5px;
-            display: none;
-        }
-        
-        .summary-item {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        
-        .phone-input-group {
-            display: flex;
-            align-items: center;
-        }
-        
-        .phone-prefix {
-            background-color: rgb(240, 151, 151);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 8px 0 0 8px;
-            font-weight: bold;
-        }
-        
-        .phone-number {
-            flex: 1;
-            border-radius: 0 8px 8px 0 !important;
-        }
-        
-        .tunisia-flag {
-            width: 24px;
-            height: 16px;
-            margin-right: 5px;
-        }
-        
-        .ville-select {
-            border-color: rgb(240, 151, 151);
-        }
-        
-        .ville-select:focus {
-            border-color: rgb(220, 131, 131);
-            box-shadow: 0 0 0 0.2rem rgba(240, 151, 151, 0.25);
-        }
+        nav, footer { background-color: rgb(240, 151, 151); }
+        .navbar-brand { text-decoration: none; font-weight: 300; padding: 20px; font-family: Arial, Helvetica, sans-serif; color: white !important; }
+        .whatsapp-form { background-color: white; border: 2px solid rgb(240, 151, 151); border-radius: 15px; padding: 30px; margin-top: 30px; }
+        .btn-wa { background-color: #25D366; color: white; border: none; padding: 15px; border-radius: 50px; font-weight: bold; width: 100%; font-size: 1.2rem; }
+        .btn-wa:hover { background-color: #128C7E; }
+        .cake-row { background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
+        .total-price { font-size: 1.8rem; font-weight: bold; color: rgb(200, 100, 100); text-align: right; margin-top: 20px; }
     </style>
 </head>
 <body>
-    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -212,154 +27,74 @@
             <a class="navbar-brand" href="commande.html">Commande</a>
         </div>
     </nav>
-    
-    <!-- Contenu principal -->
-    <div class="container mt-5">
-        
-        <!-- En-tête avec drapeau tunisien -->
-        <div class="text-center mb-5">
-            <h1 class="display-4 mb-3">
-                <i class="bi bi-cart-check"></i> Passer commande
-            </h1>
-            <p class="lead text-muted">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhPY2RAAmtCwv8zMqHxQZAsA6Mq4/+bM+b8Z3j1+j8DEkBXzkjPwPDPzR2i+A0jGqYrZ4RnYGBg+M8AAsxMDAxMDHiVk5aYwAAz4AcjLk0MDDDNhJSDFLNAFWPSYJWTAFY54UYw4lYMBCAFYAYQ40DADFJ8F+u2Z6QBJidO/N+zcOEaGkYGJqZ3DAzMjxiYGN4zMP3/z8D4HxOjY0YGBgMGBob/DAwMT1ENYGTgYGBg+MvAwMCGz4tMDN8YGBgeMfwHaoDYysjAwM7AwPCSgYHhHz4DmJgY/jIwMPwBGgA0hYGBgeE/AwPDL3wGMDEx/APi7yB2vJGBgUGUgYFhCcjI+/9g/3+Q/SA6B4v8Y8SmFmxoJmKNALxAUg4DTAwMDL+BofEfLQJ+wN2E6h0G4Fd4hI0A2kYygBGbWgD1EBHjAcCM0QAAAABJRU5ErkJggg==" alt="Tunisie" style="vertical-align: middle;">
-                Livraison dans toute la Tunisie
-            </p>
-        </div>
 
-        <!-- Formulaire de commande -->
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <form id="orderForm" class="order-form" action="https://formspree.io/f/mwvnoqbb" method="POST">
-                    
-                    <!-- Section Gâteaux -->
-                    <div class="form-section">
-                        <h4><i class="bi bi-cake"></i> Vos gâteaux</h4>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">📱 Commander par WhatsApp</h1>
+        <p class="text-center lead">Remplissez le formulaire, votre commande sera envoyée directement sur notre WhatsApp</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="whatsapp-form">
+                    <form id="whatsappOrderForm">
+                        <!-- VOS INFORMATIONS -->
+                        <h4>Vos coordonnées</h4>
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label>Nom et prénom *</label>
+                                <input type="text" class="form-control" id="nom" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Téléphone *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">+216</span>
+                                    <input type="tel" class="form-control" id="telephone" placeholder="98 765 432" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LES GÂTEAUX -->
+                        <h4 class="mt-4">Vos gâteaux</h4>
                         <div id="cakes-container">
-                            <!-- Premier gâteau (par défaut) -->
-                            <div class="cake-row mb-3" id="cake-1">
-                                <div class="row g-3">
-                                    <div class="col-md-5">
-                                        <label class="form-label">Type de gâteau</label>
-                                        <select class="form-select cake-type" name="cake-type[]" onchange="updatePrice(this)" required>
-                                            <option value="">Choisissez...</option>
-                                            <option value="chocolat" data-price="35">Fondant au Chocolat - 35DT</option>
-                                            <option value="fraisier" data-price="40">Fraisier - 40DT</option>
-                                            <option value="fruits" data-price="32">Tarte aux Fruits - 32DT</option>
-                                            <option value="opera" data-price="45">Opéra - 45DT</option>
-                                            <option value="foret-noire" data-price="42">Forêt Noire - 42DT</option>
-                                            <option value="citron" data-price="30">Tarte au Citron - 30DT</option>
-                                            <option value="paris-brest" data-price="38">Paris-Brest - 38DT</option>
-                                            <option value="tunisien" data-price="25">Baklawa - 25DT</option>
+                            <div class="cake-row" id="cake-1">
+                                <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <label>Choisissez un gâteau</label>
+                                        <select class="form-select" id="gateau-1">
+                                            <option value="Fondant au Chocolat - 35DT">Fondant au Chocolat - 35DT</option>
+                                            <option value="Fraisier - 40DT">Fraisier - 40DT</option>
+                                            <option value="Tarte aux Fruits - 32DT">Tarte aux Fruits - 32DT</option>
+                                            <option value="Opéra - 45DT">Opéra - 45DT</option>
+                                            <option value="Forêt Noire - 42DT">Forêt Noire - 42DT</option>
+                                            <option value="Tarte au Citron - 30DT">Tarte au Citron - 30DT</option>
+                                            <option value="Paris-Brest - 38DT">Paris-Brest - 38DT</option>
+                                            <option value="Baklawa - 25DT">Baklawa - 25DT</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Quantité</label>
-                                        <input type="number" class="form-control cake-quantity" name="cake-quantity[]" min="1" value="1" onchange="updatePrice(this)" required>
+                                    <div class="col-md-3 mb-2">
+                                        <label>Quantité</label>
+                                        <input type="number" class="form-control" id="quantite-1" value="1" min="1">
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Prix unitaire</label>
-                                        <div class="price-display" id="price-1">0DT</div>
-                                    </div>
-                                    <div class="col-md-1 d-flex align-items-end">
-                                        <i class="bi bi-trash3 btn-remove" onclick="removeCake(1)"></i>
+                                    <div class="col-md-3 mb-2 d-flex align-items-end">
+                                        <button type="button" class="btn btn-outline-danger" onclick="supprimerGateau(1)" id="btn-supp-1" style="display: none;">Supprimer</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <button type="button" class="btn-add-cake mt-3" onclick="addCake()">
+
+                        <button type="button" class="btn btn-outline-primary mt-2" onclick="ajouterGateau()">
                             <i class="bi bi-plus-circle"></i> Ajouter un autre gâteau
                         </button>
-                    </div>
-                    
-                    <!-- Section Informations personnelles -->
-                    <div class="form-section">
-                        <h4><i class="bi bi-person"></i> Vos informations</h4>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Nom complet *</label>
-                                <input type="text" class="form-control" id="nom" name="nom" required>
-                                <div class="error-message" id="error-nom">Le nom est requis</div>
+
+                        <!-- DATE DE RETRAIT -->
+                        <h4 class="mt-4">Retrait</h4>
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label>Date de retrait *</label>
+                                <input type="date" class="form-control" id="date" required>
                             </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Prénom *</label>
-                                <input type="text" class="form-control" id="prenom" name="prenom" required>
-                                <div class="error-message" id="error-prenom">Le prénom est requis</div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Email *</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                                <div class="error-message" id="error-email">Email invalide</div>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Téléphone Tunisie *</label>
-                                <div class="phone-input-group">
-                                    <span class="phone-prefix">+216</span>
-                                    <input type="tel" class="form-control phone-number" id="telephone" name="telephone" placeholder="XX XXX XXX" required pattern="[0-9]{8}" maxlength="8">
-                                </div>
-                                <div class="error-message" id="error-telephone">Numéro invalide (8 chiffres)</div>
-                                <small class="text-muted">Exemple: 98 765 432</small>
-                            </div>
-                            
-                            <!-- Adresse de livraison -->
-                            <div class="col-12">
-                                <label class="form-label">Adresse de livraison *</label>
-                                <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Rue, numéro, appartement..." required>
-                                <div class="error-message" id="error-adresse">L'adresse est requise</div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <label class="form-label">Ville *</label>
-                                <select class="form-select ville-select" id="ville" name="ville" required>
-                                    <option value="">Choisissez votre ville</option>
-                                    <option value="tunis">Tunis</option>
-                                    <option value="ariana">Ariana</option>
-                                    <option value="ben arous">Ben Arous</option>
-                                    <option value="manouba">La Manouba</option>
-                                    <option value="nabeul">Nabeul</option>
-                                    <option value="hammamet">Hammamet</option>
-                                    <option value="sousse">Sousse</option>
-                                    <option value="monastir">Monastir</option>
-                                    <option value="sfax">Sfax</option>
-                                    <option value="bizerte">Bizerte</option>
-                                    <option value="jendouba">Jendouba</option>
-                                    <option value="kairouan">Kairouan</option>
-                                    <option value="gabes">Gabès</option>
-                                    <option value="medenine">Médenine</option>
-                                    <option value="tataouine">Tataouine</option>
-                                </select>
-                                <div class="error-message" id="error-ville">Veuillez choisir une ville</div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <label class="form-label">Code postal</label>
-                                <input type="text" class="form-control" id="codepostal" name="codepostal" placeholder="Ex: 1000" pattern="[0-9]{4}" maxlength="4">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Section Retrait / Livraison -->
-                    <div class="form-section">
-                        <h4><i class="bi bi-truck"></i> Mode de réception</h4>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Mode de réception *</label>
-                                <select class="form-select" id="modeLivraison" name="modeLivraison" onchange="toggleLivraison()" required>
-                                    <option value="retrait">Retrait en boutique</option>
-                                    <option value="livraison">Livraison à domicile (+5DT)</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Date souhaitée *</label>
-                                <input type="date" class="form-control" id="date" name="date" required>
-                                <div class="error-message" id="error-date">Veuillez choisir une date</div>
-                                <small class="text-muted">Commande minimum 24h à l'avance</small>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Heure de retrait/livraison *</label>
-                                <select class="form-select" id="heure" name="heure" required>
-                                    <option value="">Choisissez...</option>
+                            <div class="col-md-6 mb-3">
+                                <label>Heure de retrait</label>
+                                <select class="form-select" id="heure">
                                     <option value="9h-10h">9h - 10h</option>
                                     <option value="10h-11h">10h - 11h</option>
                                     <option value="11h-12h">11h - 12h</option>
@@ -367,344 +102,147 @@
                                     <option value="14h-15h">14h - 15h</option>
                                     <option value="15h-16h">15h - 16h</option>
                                     <option value="16h-17h">16h - 17h</option>
-                                    <option value="17h-18h">17h - 18h</option>
                                 </select>
-                                <div class="error-message" id="error-heure">Veuillez choisir une heure</div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Section Instructions spéciales -->
-                    <div class="form-section">
-                        <h4><i class="bi bi-chat"></i> Instructions spéciales</h4>
+
+                        <!-- MESSAGE -->
                         <div class="mb-3">
-                            <label class="form-label">Message sur le gâteau (optionnel)</label>
-                            <input type="text" class="form-control" id="message" name="message" placeholder="Joyeux anniversaire...">
+                            <label>Message spécial (optionnel)</label>
+                            <textarea class="form-control" id="message" rows="2" placeholder="Écrire un message sur le gâteau..."></textarea>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Allergies ou restrictions (optionnel)</label>
-                            <textarea class="form-control" id="allergies" name="allergies" rows="2" placeholder="Sans gluten, sans lactose..."></textarea>
-                        </div>
-                    </div>
-                    
-                    <!-- Total -->
-                    <div class="total-price" id="totalPrice">
-                        Total: 0DT
-                    </div>
-                    
-                    <!-- Bouton de soumission -->
-                    <button type="submit" class="btn-submit mt-4">
-                        <i class="bi bi-check-circle"></i> Confirmer la commande
-                    </button>
-                    <input type="hidden" name="_subject" value="Nouvelle commande pâtisserie">
-<input type="hidden" name="_next" value="https://votre-site.com/merci.html">
-                </form>
+
+                        <!-- BOUTON ENVOI WHATSAPP -->
+                        <button type="button" class="btn-wa mt-3" onclick="envoyerSurWhatsApp()">
+                            <i class="bi bi-whatsapp"></i> Envoyer la commande sur WhatsApp
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    
-    <!-- Modal de confirmation -->
-    <div class="confirmation-modal" id="confirmationModal">
-        <div class="modal-content">
-            <i class="bi bi-check-circle-fill"></i>
-            <h3 class="mb-3">Commande confirmée !</h3>
-            <p>Merci pour votre commande. Vous allez recevoir un email de confirmation.</p>
-            <div id="orderSummary" class="mt-3 text-start"></div>
-            <p class="mt-3 text-muted">
-                <i class="bi bi-telephone"></i> Pour toute question : <strong>+216 XX XXX XXX</strong>
-            </p>
-            <button class="btn-submit mt-3" onclick="closeModal()">Fermer</button>
-        </div>
-    </div>
-    
-    <!-- Footer adapté pour la Tunisie -->
+
     <footer class="mt-5 py-4">
-        <p class="mb-0">
-            🍰 Douceurs & Gourmandises - 12 rue de la Pâtisserie, Tunis<br>
-            📞 <a href="tel:+216XXXXXXXX" class="text-white">+216 XX XXX XXX</a> - 
-            📧 <a href="mailto:bonjour@douceurs.com" class="text-white">bonjour@douceurs.com</a><br>
-            © 2026 - Tous droits réservés - Tunisie
+        <p class="mb-0 text-center">
+            🍰 Pâtisserie - Adresse, Tunis<br>
+            © 2026
         </p>
-        <!-- Ajoutez ceci après le formulaire ou dans le footer -->
-    <div class="text-center my-4">
-    <a href="https://wa.me/21651170698" class="btn btn-success btn-lg" target="_blank">
-        <i class="bi bi-whatsapp"></i> Commander sur WhatsApp
-    </a>
-    <p class="mt-2 text-muted">Cliquez pour commander directement par WhatsApp</p>
-    </div>
     </footer>
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Script personnalisé -->
+
     <script>
-        let cakeCount = 1;
-        const fraisLivraison = 5; // 5DT de frais de livraison
-        
+        let compteurGateaux = 1;
+
         // Ajouter un gâteau
-        function addCake() {
-            cakeCount++;
+        function ajouterGateau() {
+            compteurGateaux++;
             const container = document.getElementById('cakes-container');
-            const newCake = document.createElement('div');
-            newCake.className = 'cake-row mb-3';
-            newCake.id = `cake-${cakeCount}`;
-            newCake.innerHTML = `
-                <div class="row g-3">
-                    <div class="col-md-5">
-                        <label class="form-label">Type de gâteau</label>
-                        <select class="form-select cake-type" name="cake-type[]" onchange="updatePrice(this)" required>
-                            <option value="">Choisissez...</option>
-                            <option value="chocolat" data-price="35">Fondant au Chocolat - 35DT</option>
-                            <option value="fraisier" data-price="40">Fraisier - 40DT</option>
-                            <option value="fruits" data-price="32">Tarte aux Fruits - 32DT</option>
-                            <option value="opera" data-price="45">Opéra - 45DT</option>
-                            <option value="foret-noire" data-price="42">Forêt Noire - 42DT</option>
-                            <option value="citron" data-price="30">Tarte au Citron - 30DT</option>
-                            <option value="paris-brest" data-price="38">Paris-Brest - 38DT</option>
-                            <option value="tunisien" data-price="25">Baklawa - 25DT</option>
+            const nouvelleLigne = document.createElement('div');
+            nouvelleLigne.className = 'cake-row';
+            nouvelleLigne.id = `cake-${compteurGateaux}`;
+            nouvelleLigne.innerHTML = `
+                <div class="row">
+                    <div class="col-md-6 mb-2">
+                        <label>Choisissez un gâteau</label>
+                        <select class="form-select" id="gateau-${compteurGateaux}">
+                            <option value="Fondant au Chocolat - 35DT">Fondant au Chocolat - 35DT</option>
+                            <option value="Fraisier - 40DT">Fraisier - 40DT</option>
+                            <option value="Tarte aux Fruits - 32DT">Tarte aux Fruits - 32DT</option>
+                            <option value="Opéra - 45DT">Opéra - 45DT</option>
+                            <option value="Forêt Noire - 42DT">Forêt Noire - 42DT</option>
+                            <option value="Tarte au Citron - 30DT">Tarte au Citron - 30DT</option>
+                            <option value="Paris-Brest - 38DT">Paris-Brest - 38DT</option>
+                            <option value="Baklawa - 25DT">Baklawa - 25DT</option>
                         </select>
                     </div>
-                    <div class="col-md-3">
-                        <label class="form-label">Quantité</label>
-                        <input type="number" class="form-control cake-quantity" name="cake-quantity[]" min="1" value="1" onchange="updatePrice(this)" required>
+                    <div class="col-md-3 mb-2">
+                        <label>Quantité</label>
+                        <input type="number" class="form-control" id="quantite-${compteurGateaux}" value="1" min="1">
                     </div>
-                    <div class="col-md-3">
-                        <label class="form-label">Prix unitaire</label>
-                        <div class="price-display" id="price-${cakeCount}">0DT</div>
-                    </div>
-                    <div class="col-md-1 d-flex align-items-end">
-                        <i class="bi bi-trash3 btn-remove" onclick="removeCake(${cakeCount})"></i>
+                    <div class="col-md-3 mb-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-outline-danger" onclick="supprimerGateau(${compteurGateaux})">Supprimer</button>
                     </div>
                 </div>
             `;
-            container.appendChild(newCake);
-            updateTotalPrice();
+            container.appendChild(nouvelleLigne);
         }
-        
+
         // Supprimer un gâteau
-        function removeCake(id) {
-            if (cakeCount > 1) {
-                const element = document.getElementById(`cake-${id}`);
-                element.remove();
-                cakeCount--;
-                updateTotalPrice();
+        function supprimerGateau(id) {
+            if (compteurGateaux > 1) {
+                document.getElementById(`cake-${id}`).remove();
+                compteurGateaux--;
             }
         }
-        
-        // Mettre à jour le prix d'un gâteau
-        function updatePrice(element) {
-            const cakeRow = element.closest('.cake-row');
-            const select = cakeRow.querySelector('.cake-type');
-            const quantity = cakeRow.querySelector('.cake-quantity').value;
-            const priceDisplay = cakeRow.querySelector('.price-display');
-            
-            const selectedOption = select.options[select.selectedIndex];
-            const price = selectedOption.dataset.price || 0;
-            
-            const totalPrice = price * quantity;
-            priceDisplay.textContent = totalPrice + 'DT';
-            
-            updateTotalPrice();
-        }
-        
-        // Basculer entre livraison et retrait
-        function toggleLivraison() {
-            updateTotalPrice();
-        }
-        
-        // Mettre à jour le prix total
-        function updateTotalPrice() {
+
+        // Envoyer sur WhatsApp
+        function envoyerSurWhatsApp() {
+            // Récupérer les infos client
+            const nom = document.getElementById('nom').value;
+            const telephone = document.getElementById('telephone').value;
+            const date = document.getElementById('date').value;
+            const heure = document.getElementById('heure').value;
+            const messageSpecial = document.getElementById('message').value;
+
+            // Vérifications de base
+            if (!nom || !telephone || !date) {
+                alert('Veuillez remplir : Nom, Téléphone et Date de retrait');
+                return;
+            }
+
+            // Construire le message des gâteaux
+            let gateauxCommandes = "";
             let total = 0;
-            const priceDisplays = document.querySelectorAll('.price-display');
+
+            for (let i = 1; i <= compteurGateaux; i++) {
+                const gateauSelect = document.getElementById(`gateau-${i}`);
+                const quantite = document.getElementById(`quantite-${i}`);
+                
+                if (gateauSelect && quantite) {
+                    const gateauNom = gateauSelect.value;
+                    const gateauQte = quantite.value;
+                    
+                    // Extraire le prix (entre - et DT)
+                    const prixMatch = gateauNom.match(/(\d+)DT/);
+                    const prix = prixMatch ? parseInt(prixMatch[1]) : 0;
+                    
+                    gateauxCommandes += `🍰 ${gateauNom} x${gateauQte}\n`;
+                    total += prix * parseInt(gateauQte);
+                }
+            }
+
+            // Formater la date
+            const dateFormatee = date.split('-').reverse().join('/');
+
+            // Créer le message WhatsApp
+            let message = `*NOUVELLE COMMANDE PÂTISSERIE*%0A%0A`;
+            message += `👤 *Client :* ${nom}%0A`;
+            message += `📞 *Téléphone :* +216 ${telephone}%0A`;
+            message += `📅 *Retrait :* ${dateFormatee} à ${heure}%0A%0A`;
+            message += `*GÂTEAUX COMMANDÉS :*%0A`;
+            message += `${gateauxCommandes}%0A`;
+            message += `💰 *TOTAL :* ${total} DT%0A%0A`;
             
-            priceDisplays.forEach(display => {
-                const price = parseInt(display.textContent) || 0;
-                total += price;
-            });
-            
-            // Ajouter les frais de livraison si nécessaire
-            const modeLivraison = document.getElementById('modeLivraison').value;
-            if (modeLivraison === 'livraison') {
-                total += fraisLivraison;
+            if (messageSpecial) {
+                message += `📝 *Message :* ${messageSpecial}%0A`;
             }
             
-            document.getElementById('totalPrice').textContent = `Total: ${total}DT`;
+            message += `%0A✅ Commande envoyée depuis le site web`;
+
+            // Numéro WhatsApp (À CHANGER !)
+            const numeroWhatsApp = "216XXXXXXXXX"; // REMPLACEZ PAR VOTRE NUMÉRO
+
+            // Ouvrir WhatsApp
+            const url = `https://wa.me/${numeroWhatsApp}?text=${message}`;
+            window.open(url, '_blank');
         }
-        
-        // Valider le formulaire
-        function validateForm() {
-            let isValid = true;
-            
-            // Cacher tous les messages d'erreur
-            document.querySelectorAll('.error-message').forEach(msg => {
-                msg.style.display = 'none';
-            });
-            
-            // Vérifier les champs requis
-            const nom = document.getElementById('nom');
-            if (!nom.value) {
-                document.getElementById('error-nom').style.display = 'block';
-                isValid = false;
-            }
-            
-            const prenom = document.getElementById('prenom');
-            if (!prenom.value) {
-                document.getElementById('error-prenom').style.display = 'block';
-                isValid = false;
-            }
-            
-            const email = document.getElementById('email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value || !emailRegex.test(email.value)) {
-                document.getElementById('error-email').style.display = 'block';
-                isValid = false;
-            }
-            
-            const telephone = document.getElementById('telephone');
-            const phoneRegex = /^[0-9]{8}$/;
-            if (!telephone.value || !phoneRegex.test(telephone.value)) {
-                document.getElementById('error-telephone').style.display = 'block';
-                isValid = false;
-            }
-            
-            const adresse = document.getElementById('adresse');
-            if (!adresse.value) {
-                document.getElementById('error-adresse').style.display = 'block';
-                isValid = false;
-            }
-            
-            const ville = document.getElementById('ville');
-            if (!ville.value) {
-                document.getElementById('error-ville').style.display = 'block';
-                isValid = false;
-            }
-            
-            const date = document.getElementById('date');
-            if (!date.value) {
-                document.getElementById('error-date').style.display = 'block';
-                isValid = false;
-            }
-            
-            const heure = document.getElementById('heure');
-            if (!heure.value) {
-                document.getElementById('error-heure').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Vérifier qu'au moins un gâteau est sélectionné
-            const cakeTypes = document.querySelectorAll('.cake-type');
-            let hasCake = false;
-            cakeTypes.forEach(cake => {
-                if (cake.value) hasCake = true;
-            });
-            
-            if (!hasCake) {
-                alert('Veuillez sélectionner au moins un gâteau');
-                isValid = false;
-            }
-            
-            return isValid;
-        }
-        
-        // Soumettre la commande
-        function submitOrder(event) {
-            event.preventDefault();
-            
-            if (validateForm()) {
-                // Récupérer les données du formulaire
-                const nom = document.getElementById('nom').value;
-                const prenom = document.getElementById('prenom').value;
-                const email = document.getElementById('email').value;
-                const telephone = '+216 ' + document.getElementById('telephone').value;
-                const adresse = document.getElementById('adresse').value;
-                const ville = document.getElementById('ville').value;
-                const codepostal = document.getElementById('codepostal').value;
-                const modeLivraison = document.getElementById('modeLivraison').value;
-                const date = document.getElementById('date').value;
-                const heure = document.getElementById('heure').value;
-                const message = document.getElementById('message').value;
-                const allergies = document.getElementById('allergies').value;
-                
-                // Récupérer les gâteaux commandés
-                const cakes = [];
-                const cakeRows = document.querySelectorAll('.cake-row');
-                cakeRows.forEach(row => {
-                    const select = row.querySelector('.cake-type');
-                    const quantity = row.querySelector('.cake-quantity').value;
-                    if (select.value) {
-                        cakes.push({
-                            type: select.options[select.selectedIndex].text,
-                            quantity: quantity,
-                            price: row.querySelector('.price-display').textContent
-                        });
-                    }
-                });
-                
-                // Créer le résumé de commande
-                const total = document.getElementById('totalPrice').textContent;
-                let summary = `<h5>Récapitulatif :</h5>`;
-                summary += `<p><strong>${prenom} ${nom}</strong></p>`;
-                summary += `<p>📧 ${email}</p>`;
-                summary += `<p>📞 ${telephone}</p>`;
-                summary += `<p>📍 ${adresse}, ${ville} ${codepostal}</p>`;
-                summary += `<p>🚚 ${modeLivraison === 'livraison' ? 'Livraison' : 'Retrait en boutique'}</p>`;
-                summary += `<p>📅 ${date} à ${heure}</p>`;
-                summary += `<hr><h6>Gâteaux :</h6>`;
-                
-                cakes.forEach(cake => {
-                    summary += `<p>• ${cake.type} x${cake.quantity} = ${cake.price}</p>`;
-                });
-                
-                if (message) summary += `<p><small>Message: ${message}</small></p>`;
-                if (allergies) summary += `<p><small>Restrictions: ${allergies}</small></p>`;
-                
-                summary += `<hr><p><strong>${total}</strong></p>`;
-                
-                document.getElementById('orderSummary').innerHTML = summary;
-                
-                // Afficher la modale de confirmation
-                document.getElementById('confirmationModal').style.display = 'flex';
-                
-                // Ici, vous pourriez envoyer les données à un serveur
-                console.log('Commande Tunisie soumise :', {
-                    client: {nom, prenom, email, telephone},
-                    adresse: {adresse, ville, codepostal},
-                    livraison: {modeLivraison, date, heure},
-                    gateaux: cakes,
-                    message,
-                    allergies
-                });
-            }
-        }
-        
-        // Fermer la modale
-        function closeModal() {
-            document.getElementById('confirmationModal').style.display = 'none';
-            // Rediriger vers l'accueil ou réinitialiser le formulaire
-            // window.location.href = 'accueil.html';
-        }
-        
-        // Initialiser la date minimum (24h à l'avance)
+
+        // Date minimum = aujourd'hui
         window.onload = function() {
-            const dateInput = document.getElementById('date');
-            const today = new Date();
-            today.setDate(today.getDate() + 1); // +24h
-            
-            const year = today.getFullYear();
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const day = String(today.getDate()).padStart(2, '0');
-            
-            dateInput.min = `${year}-${month}-${day}`;
-            
-            // Formatage automatique du téléphone
-            const telephoneInput = document.getElementById('telephone');
-            telephoneInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 8) value = value.slice(0, 8);
-                e.target.value = value;
-            });
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').min = today;
         };
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
