@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douceurs & Gourmandises - Accueil</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        nav, footer {
+            background-color: rgb(240, 151, 151);
+        } 
+
+        .navbar-brand {
+            text-decoration: none;
+            font-weight: 300;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            text-align: center;
+            font-weight: 100;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        fieldset {
+            border: 2px solid rgb(240, 151, 151);
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        fieldset img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        h4 {
+            text-align: center;
+            margin-top: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="accueil.html">Accueil</a>
+            <a class="navbar-brand" href="gateaux.html">Nos gâteaux</a>
+            <a class="navbar-brand" href="histoire.html">Notre histoire</a>
+            <a class="navbar-brand" href="contact.html">Contact</a>
+            <a class="navbar-brand" href="commande.html">Commande</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="text-center mb-4">
+            <h1 class="mb-0">🍪 Douceurs & Gourmandises</h1>
+            <h5 class="text-muted">Pâtisserie artisanale</h5>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <fieldset class="p-3">
+                    <img src="gateau.jpg" class="img-fluid" alt="Gâteau au chocolat noir avec ganache">
+                    <h4>Gâteau au chocolat</h4>
+                    <p class="text-muted">Fondant et gourmand</p>
+                </fieldset>
+            </div>
+            
+            <div class="col-md-4">
+                <fieldset class="p-3">
+                    <img src="fraise.jpg" class="img-fluid" alt="Gâteau aux fraises fraîches et crème légère">
+                    <h4>Gâteau aux fraises</h4>
+                    <p class="text-muted">Frais et fruité</p>
+                </fieldset>
+            </div>
+            
+            <div class="col-md-4">
+                <fieldset class="p-3">
+                    <img src="fruit.webp" class="img-fluid" alt="Gâteau aux fruits de saison">
+                    <h4>Gâteau aux fruits</h4>
+                    <p class="text-muted">Coloré et savoureux</p>
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="gateaux.html" class="btn btn-success btn-lg">
+                <i class="bi bi-eye"></i> Voir tous nos gâteaux
+            </a>
+        </div>
+    </div>
+    
+    <footer class="mt-5 py-4">
+        <p class="mb-0">
+            🍰 Douceurs & Gourmandises - 12 rue de la Pâtisserie<br>
+            📞 01 23 45 67 89 - 📧 bonjour@douceurs.com<br>
+            © 2026 - Tous droits réservés
+        </p>
+    </footer>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

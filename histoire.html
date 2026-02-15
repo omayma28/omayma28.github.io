@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Histoire - Douceurs & Gourmandises</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        nav, footer {
+            background-color: rgb(240, 151, 151);
+        } 
+
+        .navbar-brand {
+            text-decoration: none;
+            font-weight: 300;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white !important;
+        }
+
+        .navbar-brand:hover {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        p {
+            text-align: center;
+            font-weight: 100;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+        }
+        
+        .story-card {
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(240, 151, 151);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 3px solid rgb(240, 151, 151);
+            margin-left: 20px;
+        }
+        
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(240, 151, 151);
+            margin-bottom: 10px;
+        }
+        
+        .values-icon {
+            font-size: 2.5rem;
+            color: rgb(240, 151, 151);
+            margin-bottom: 15px;
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgb(240, 151, 151);
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            color: rgb(200, 100, 100);
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: rgb(240, 151, 151);
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #666;
+            border-left: 4px solid rgb(240, 151, 151);
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="accueil.html">Accueil</a>
+            <a class="navbar-brand" href="gateaux.html">Nos gâteaux</a>
+            <a class="navbar-brand" href="histoire.html">Notre histoire</a>
+            <a class="navbar-brand" href="contact.html">Contact</a>
+            <a class="navbar-brand" href="commande.html">Commande</a>
+        </div>
+    </nav>
+    
+    <!-- Contenu principal -->
+    <div class="container mt-5">
+        
+        <!-- En-tête -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-3">
+                <i class="bi bi-book-heart"></i> Notre Histoire
+            </h1>
+            <p class="lead text-muted">Une passion transmise depuis trois générations</p>
+        </div>
+
+        <!-- Section Histoire -->
+        <div class="story-card">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/api/placeholder/500/400" class="img-fluid rounded" alt="Notre pâtisserie historique">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Les débuts</h2>
+                    <p class="text-start">
+                        Tout a commencé en 1985, lorsque Grand-Mère Jeanne décide d'ouvrir sa première pâtisserie dans le quartier historique de Lyon. Avec des recettes traditionnelles transmises par sa propre grand-mère, elle crée des gâteaux qui rappellent les saveurs de l'enfance.
+                    </p>
+                    <p class="text-start">
+                        Très vite, sa réputation dépasse les frontières du quartier. Les clients viennent de loin pour déguster son fameux gâteau au chocolat et ses tartes aux fruits de saison.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="story-card">
+            <h2 class="text-center">Notre parcours</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">1985</div>
+                <p class="text-start mb-0">
+                    <strong>Création de la première pâtisserie</strong> - Grand-Mère Jeanne ouvre sa boutique au 12 rue de la Pâtisserie à Lyon.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2000</div>
+                <p class="text-start mb-0">
+                    <strong>Transmission à la deuxième génération</strong> - La fille de Jeanne, Marie, reprend l'affaire et modernise les recettes tout en préservant leur authenticité.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2010</div>
+                <p class="text-start mb-0">
+                    <strong>Première récompense</strong> - Nous recevons le prix de la "Meilleure Pâtisserie Traditionnelle" de la région.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2015</div>
+                <p class="text-start mb-0">
+                    <strong>Expansion</strong> - Ouverture d'un second laboratoire pour répondre à la demande croissante.
+                </p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <p class="text-start mb-0">
+                    <strong>La troisième génération</strong> - Les petits-enfants de Jeanne apportent leur touche moderne avec de nouvelles créations tout en respectant les traditions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Nos valeurs -->
+        <div class="story-card">
+            <h2 class="text-center">Nos valeurs</h2>
+            
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="values-icon">
+                        <i class="bi bi-egg-fried"></i>
+                    </div>
+                    <h5>Produits frais</h5>
+                    <p class="small">Nous sélectionnons les meilleurs ingrédients, locaux et de saison.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="values-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h5>Fait maison</h5>
+                    <p class="small">Chaque gâteau est préparé avec amour dans notre laboratoire.</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="values-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h5>Transmission</h5>
+                    <p class="small">Nous perpétuons un savoir-faire familial unique.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="quote text-center mx-auto" style="max-width: 800px;">
+            <i class="bi bi-quote fs-1" style="color: rgb(240, 151, 151);"></i>
+            <p class="mb-0">"La pâtisserie, c'est l'art de partager du bonheur avec ceux qu'on aime."</p>
+            <footer class="mt-2">— Grand-Mère Jeanne, fondatrice</footer>
+        </div>
+
+        <!-- L'équipe -->
+        <div class="story-card">
+            <h2 class="text-center">Notre équipe aujourd'hui</h2>
+            
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <img src="/api/placeholder/150/150" class="team-img" alt="Marie">
+                    <h5>Marie</h5>
+                    <p class="text-muted small">Chef pâtissière</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <img src="/api/placeholder/150/150" class="team-img" alt="Thomas">
+                    <h5>Thomas</h5>
+                    <p class="text-muted small">Pâtissier</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <img src="/api/placeholder/150/150" class="team-img" alt="Sophie">
+                    <h5>Sophie</h5>
+                    <p class="text-muted small">Créatrice</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appel à l'action -->
+        <div class="text-center my-5">
+            <h4>Vous souhaitez goûter nos créations ?</h4>
+            <a href="gateaux.html" class="btn btn-lg mt-3" style="background-color: rgb(240, 151, 151); color: white;">
+                <i class="bi bi-cake"></i> Découvrir nos gâteaux
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mt-5 py-4">
+        <p class="mb-0">
+            🍰 Douceurs & Gourmandises - 12 rue de la Pâtisserie<br>
+            📞 <a href="tel:+33123456789" class="text-white">01 23 45 67 89</a> - 
+            📧 <a href="mailto:bonjour@douceurs.com" class="text-white">bonjour@douceurs.com</a><br>
+            © 2026 - Tous droits réservés
+        </p>
+    </footer>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
